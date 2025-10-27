@@ -1,3 +1,36 @@
+local map = vim.keymap.set
+
+-- Exit INSERT mode
+map("i", "jj", "<ESC>", { desc = "ESC remap" })
+map("i", "оо", "<ESC>", { desc = "ESC remap" })
+
+-- Terminal working
+map("t", "<A-q>", "<C-\\><C-n>", { desc = "Quit terminal mode" })
+map("t", "<C-k>", "<C-\\><C-n><C-w>k")
+map("t", "<C-j>", "<C-\\><C-n><C-w>j")
+map("t", "<C-h>", "<C-\\><C-n><C-w>h")
+map("t", "<C-l>", "<C-\\><C-n><C-w>l")
+
+--Disconnecting arrows
+vim.api.nvim_set_keymap("n", "<Up>", "<Nop>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Down>", "<Nop>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Left>", "<Nop>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Right>", "<Nop>", { noremap = true })
+
+-- Buffers working
+map("n", "<Tab>", "<CMD>bnext<CR>", { desc = "Go to next buffer" })
+map("n", "<S-Tab>", "<CMD>bprevious<CR>", { desc = "Go to previous buffer" })
+
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
+
+-- Lsp
+map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+
+
+-- Langmapper for russian keyboard layout
 local function escape(str)
   local escape_chars = [[;,."|\]]
   return vim.fn.escape(str, escape_chars)
@@ -13,26 +46,4 @@ vim.opt.langmap = vim.fn.join({
   escape(ru) .. ";" .. escape(en),
 }, ",")
 
-local map = vim.keymap.set
-
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jj", "<ESC>", { desc = "ESC remap" })
-map("i", "оо", "<ESC>", { desc = "ESC remap" })
-
-map("t", "<A-q>", "<C-\\><C-n>", { desc = "Quit terminal mode" })
-map("t", "<C-k>", "<C-\\><C-n><C-w>k")
-map("t", "<C-j>", "<C-\\><C-n><C-w>j")
-map("t", "<C-h>", "<C-\\><C-n><C-w>h")
-map("t", "<C-l>", "<C-\\><C-n><C-w>l")
-
---Disconnecting arrows
-vim.api.nvim_set_keymap("n", "<Up>", "<Nop>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Down>", "<Nop>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Left>", "<Nop>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Right>", "<Nop>", { noremap = true })
-
-vim.keymap.set("n", "<Tab>", "<CMD>bnext<CR>", { desc = "Go to next buffer" })
-vim.keymap.set("n", "<S-Tab>", "<CMD>bprevious<CR>", { desc = "Go to previous buffer" })
-
-vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc = "Rename symbol" })
 

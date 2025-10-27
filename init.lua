@@ -8,5 +8,6 @@ else
 	require("core.keymaps")
 	require("config.lazy")
   require("config.colorscheme")
+  require("core.rewrite.options")
 	--vim.g.python3_host_prog = vim.fn.expand("~/.config/nvim/.nvim-venv/bin/python3")
 end

@@ -17,3 +17,5 @@ vim.cmd("syntax on")
 vim.cmd("set termguicolors")
 
 vim.cmd("set so=8")
+
+
