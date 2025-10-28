@@ -1,5 +1,4 @@
-return {
-  "folke/snacks.nvim",
+return { "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
   ---@type snacks.Config
@@ -31,7 +30,7 @@ return {
         { section = "startup" },
       },
     },
-    explorer = { enabled = true },
+    explorer = { enabled = false },
     image = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
@@ -47,7 +46,7 @@ return {
   },
   keys = {
     -- Explorer
-    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
+    -- { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
     -- Find
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },

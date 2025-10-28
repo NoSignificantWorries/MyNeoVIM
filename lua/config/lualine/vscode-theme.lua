@@ -1,4 +1,4 @@
-local lualine = require "lualine"
+local lualine = require("lualine")
 
 local colors = {
   bg = "#34343b",
