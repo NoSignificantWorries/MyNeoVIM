@@ -39,7 +39,7 @@ config = {
       statusline = 1000,
       tabline = 1000,
       winbar = 1000,
-      refresh_time = 16, -- ~60fps
+      refresh_time = 16,
       events = {
         'WinEnter',
         'BufEnter',
@@ -55,13 +55,14 @@ config = {
     }
   },
   sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {
+    lualine_a = {
       {
         'mode',
         icon = "",
       },
+    },
+    lualine_b = {},
+    lualine_c = {
       {
         "filetype",
         icon_only = true,
@@ -90,7 +91,7 @@ config = {
     lualine_x = {
       {
         function()
-          return " %l  %c"
+          return "Ln %l Cn %c"
         end,
         cond = conditions.hide_line_col,
         icon = "",
@@ -114,7 +115,6 @@ config = {
       {
         function()
           local msg = "No Active Lsp"
-          -- local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
           local clients = vim.lsp.get_active_clients()
           if next(clients) == nil then
             return msg
