@@ -1,3 +1,2 @@
--- vim.cmd.colorscheme("catppuccin")
-vim.cmd.colorscheme("palette")
+vim.cmd.colorscheme("catppuccin")
 

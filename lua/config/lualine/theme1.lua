@@ -1,5 +1,9 @@
 local lualine = require("lualine")
 
+local function total_lines()
+  return tostring(vim.fn.line("$"))
+end
+
 local conditions = {
   buffer_not_empty = function()
     return vim.fn.empty(vim.fn.expand "%:t") ~= 1
@@ -90,11 +94,16 @@ config = {
     },
     lualine_x = {
       {
-        function()
-          return "Ln %l Cn %c"
-        end,
-        cond = conditions.hide_line_col,
+        "progress",
+        icon = "󱀳",
+      },
+      {
+        "location",
         icon = "",
+      },
+      {
+        total_lines,
+        icon = "",
       },
       {
         function ()
