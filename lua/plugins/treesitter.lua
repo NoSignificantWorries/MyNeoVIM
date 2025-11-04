@@ -1,37 +1,59 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  branch = "main",
-  version = false,
-  lazy = false,
+  branch = "master",
   build = ":TSUpdate",
-  opts = {
-    auto_install = false,
-    indent = { enable = true },
-    highlight = {
-      enable = true,
-      additional_vim_regex_highlighting = false,
-    },
-    folds = { enable = true },
-    ensure_installed = {
-      "bash",
-      "json",
-      "jsonc",
-      "lua",
-      "luadoc",
-      "markdown",
-      "markdown_inline",
-      "printf",
-      "python",
-      "regex",
-      "toml",
-      "tsx",
-      "vim",
-      "vimdoc",
-      "xml",
-      "yaml",
-    },
-  },
-  config = function(_, opts)
-    require("nvim-treesitter.configs").setup(opts)
+  event = { "BufReadPre", "BufNewFile" },
+  config = function()
+    local treesitter = require("nvim-treesitter.configs")
+
+    treesitter.setup({
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
+      indent = {
+        enable = true,
+      },
+      ensure_installed = {
+        "bash",
+        "json",
+        "jsonc",
+        "lua",
+        "luadoc",
+        "javascript",
+        "typescript",
+        "tsx",
+        "vim",
+        "vimdoc",
+        "yaml",
+        "html",
+        "css",
+        "markdown",
+        "markdown_inline",
+        "printf",
+        "python",
+        "lua",
+        "regex",
+        "toml",
+        "dockerfile",
+        "gitignore",
+        "c",
+        "rust",
+      },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<C-space>",
+          node_incremental = "<C-space>",
+          scope_incremental = false,
+          node_decremental = "<bs>",
+        },
+      },
+    })
+
+    vim.opt.foldmethod = "expr"
+    vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+    vim.opt.foldlevelstart = 99
   end,
 }
+
