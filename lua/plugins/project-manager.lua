@@ -5,6 +5,8 @@ return {
       "~/Projects/*",
       "~/projects/*",
       "~/*",
+      "~/Hyprdots/*",
+      "~/Hyprdots/config/*",
       "~/.config/*",
     },
     last_session_on_startup = false,

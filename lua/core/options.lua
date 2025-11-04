@@ -13,7 +13,7 @@ vim.cmd("set smartindent")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 
-vim.cmd("syntax on")
+vim.cmd("syntax off")
 vim.cmd("set termguicolors")
 
 vim.cmd("set so=8")
