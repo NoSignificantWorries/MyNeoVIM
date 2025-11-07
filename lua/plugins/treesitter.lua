@@ -37,8 +37,11 @@ return {
         "toml",
         "dockerfile",
         "gitignore",
+        "ninja",
+        "rst",
         "c",
         "rust",
+        "hyprlang",
       },
       incremental_selection = {
         enable = true,

@@ -59,9 +59,9 @@ return {
           expander_highlight = "NeoTreeExpander"
         },
         icon = {
-          folder_closed = "",
-          folder_open = "",
-          folder_empty = "",
+          folder_closed = "",
+          folder_open = "",
+          folder_empty = "󰉒",
           default = "",
         },
         git_status = {
@@ -97,8 +97,8 @@ return {
     })
   end,
   keys = {
-    { "<leader>e", "<CMD>Neotree left toggle focus<CR>", desc = "Toggle sidebar neo-tree", mode = { "n" } },
-    { "<leader>o", "<CMD>Neotree float show<CR>", desc = "Open floating neo-tree", mode = { "n" } },
-    { "<localleader>e", "<CMD>Neotree focus<CR>", desc = "Toggle sidebar neo-tree", mode = { "n" } },
+    { "<leader>e",      "<CMD>Neotree left toggle focus<CR>", desc = "Toggle sidebar neo-tree", mode = { "n" } },
+    { "<leader>o",      "<CMD>Neotree float show<CR>",        desc = "Open floating neo-tree",  mode = { "n" } },
+    { "<localleader>e", "<CMD>Neotree focus<CR>",             desc = "Toggle sidebar neo-tree", mode = { "n" } },
   },
 }

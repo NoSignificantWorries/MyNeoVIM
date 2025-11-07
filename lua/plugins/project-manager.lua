@@ -7,6 +7,8 @@ return {
       "~/*",
       "~/Hyprdots/*",
       "~/Hyprdots/config/*",
+      "~/Hyprdots_main/*",
+      "~/Hyprdots_main/config/*",
       "~/.config/*",
     },
     last_session_on_startup = false,

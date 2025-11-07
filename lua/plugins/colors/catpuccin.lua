@@ -18,6 +18,7 @@ return {
           transparent_background = true,
           term_colors = true,
 
+          no_italic = true,
           styles = {
             functions = { "bold" }, -- Стиль для функций
           },
