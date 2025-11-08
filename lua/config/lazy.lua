@@ -21,7 +21,7 @@ require("lazy").setup({
     { import = "plugins.movement" },
     { import = "plugins" },
     { import = "plugins.lsp" },
-    { import = "plugins.lang" },
+    { import = "plugins.code" },
     { import = "plugins.colors" },
   },
   checker = { enabled = true },
