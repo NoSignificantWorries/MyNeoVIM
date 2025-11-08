@@ -25,6 +25,12 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"ruff",
+					"gopls",
+					"rust_analyzer",
+					"qmlls",
+					"lemminx",
+					"clangd",
+					"dockerls",
 				},
 				automatic_installation = true,
 			})
