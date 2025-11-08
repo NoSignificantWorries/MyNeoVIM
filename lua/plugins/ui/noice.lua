@@ -13,7 +13,15 @@ return {
       filter = { pattern = "^:%s*!", icon = "$", lang = "bash" },
       lua = { pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" }, icon = "", lang = "lua" },
       help = { pattern = "^:%s*he?l?p?%s+", icon = "", lang = "vim" },
-      input = {}, -- для input() prompt
+      input = {},
+    },
+    messages = {
+      enabled = true,
+      view = "notify",
+      view_error = "notify",
+      view_warn = "notify",
+      view_history = "messages",
+      view_search = "virtualtext",
     },
     popupmenu = {
       enabled = true,
@@ -52,5 +60,13 @@ return {
   dependencies = {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
-  }
+  },
+
+  config = function()
+    require("notify").setup({
+      background_colour = "#1e222a",
+    })
+
+    require("noice").setup({})
+  end,
 }

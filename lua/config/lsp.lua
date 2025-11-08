@@ -1,2 +1,3 @@
 vim.lsp.enable("lua_ls")
-vim.lsp.enable("pyright-langserver")
+vim.lsp.enable("ruff")
+-- vim.lsp.enable("pyright-langserver")
