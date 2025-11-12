@@ -11,5 +11,5 @@ else
 	require("config.colorscheme")
 	require("config.style")
 	require("core.autocmds")
-	--vim.g.python3_host_prog = vim.fn.expand("~/.config/nvim/.nvim-venv/bin/python3")
+	-- vim.g.python3_host_prog = vim.fn.expand("~/.config/nvim/.nvim-venv/bin/python3")
 end

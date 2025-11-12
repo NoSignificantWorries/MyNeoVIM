@@ -39,6 +39,7 @@ return {
 				"gitignore",
 				"ninja",
 				"rst",
+				"go",
 				"c",
 				"rust",
 				"hyprlang",
@@ -53,9 +54,5 @@ return {
 				},
 			},
 		})
-
-		vim.opt.foldmethod = "expr"
-		vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-		vim.opt.foldlevelstart = 99
 	end,
 }

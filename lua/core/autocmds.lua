@@ -13,3 +13,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, bufopts, { desc = "Format code" })
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "snacks_dashboard",
+	callback = function()
+		vim.opt_local.foldenable = false
+	end,
+})

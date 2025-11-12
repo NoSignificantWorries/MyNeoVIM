@@ -48,8 +48,12 @@ return {
 					"ruff",
 					-- formatters
 					"stylua",
+					"prettier",
+					"goimports",
+					-- "gofumpt",
 					-- linters
 					"luacheck",
+					"gospel",
 				},
 				auto_update = true,
 				automatic_installation = true,
