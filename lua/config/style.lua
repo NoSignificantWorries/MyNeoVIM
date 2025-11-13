@@ -6,7 +6,7 @@ if use_spec_number_color then
 	vim.opt.cursorline = true
 
 	vim.api.nvim_set_hl(0, "CursorLineNr", {
-		fg = "#FFAE00",
+		fg = spec_number_color,
 		bold = true,
 	})
 end
@@ -55,3 +55,19 @@ if use_spec_border_color then
 		bg = "NONE",
 	})
 end
+
+local signs = { Error = " ", Warn = " ", Hint = "󰛩 ", Info = " " }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
+vim.diagnostic.config({
+	virtual_text = {
+		source = "always",
+		prefix = "●",
+	},
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+})

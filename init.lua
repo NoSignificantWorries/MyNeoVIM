@@ -12,4 +12,5 @@ else
 	require("config.style")
 	require("core.autocmds")
 	-- vim.g.python3_host_prog = vim.fn.expand("~/.config/nvim/.nvim-venv/bin/python3")
+	require("custom.runcode")
 end

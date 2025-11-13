@@ -50,6 +50,7 @@ return {
 					"stylua",
 					"prettier",
 					"goimports",
+					"rustfmt",
 					-- "gofumpt",
 					-- linters
 					"luacheck",

@@ -26,6 +26,9 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
+-- lsp
+map("n", "<leader>d", "<CMD>lua vim.diagnostic.open_float()<CR>", { desc = "Show diagnostics under cursor" })
+
 -- Terminal
 map("t", "<C-q>", "<C-\\><C-n>", { desc = "Quit terminal mode" })
 map("t", "<C-k>", "<C-\\><C-n><C-w>k")
