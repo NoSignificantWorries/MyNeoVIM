@@ -45,14 +45,14 @@ return {
 	keys = {
 		-- Find
 		{
-			"<leader>fb",
+			"<leader><leader>b",
 			function()
 				Snacks.picker.buffers()
 			end,
 			desc = "Buffers",
 		},
 		{
-			"<leader><leader>",
+			"<leader><leader>f",
 			function()
 				Snacks.picker.files()
 			end,
