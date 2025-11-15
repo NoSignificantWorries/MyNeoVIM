@@ -1,4 +1,5 @@
 local o = vim.o
+
 o.cursorlineopt = "both"
 
 --vim settings
@@ -16,7 +17,7 @@ vim.cmd("set relativenumber")
 vim.cmd("syntax on")
 vim.cmd("set termguicolors")
 
-vim.cmd("set so=8")
+vim.cmd("set so=12")
 
 o.foldmethod = "expr"
 o.foldexpr = "v:lua.vim.treesitter.foldexpr()"

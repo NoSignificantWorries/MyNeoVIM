@@ -18,8 +18,8 @@ vim.api.nvim_set_keymap("n", "<Left>", "<Nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Right>", "<Nop>", { noremap = true })
 
 -- Buffers working
-map("n", "<Tab>", "<CMD>bnext<CR>", { desc = "Go to next buffer" })
-map("n", "<S-Tab>", "<CMD>bprevious<CR>", { desc = "Go to previous buffer" })
+map("n", "<C-Tab>", "<CMD>bnext<CR>", { desc = "Go to next buffer" })
+map("n", "<C-S-Tab>", "<CMD>bprevious<CR>", { desc = "Go to previous buffer" })
 
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
