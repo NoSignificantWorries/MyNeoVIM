@@ -21,4 +21,7 @@ return {
 			},
 		})
 	end,
+	keys = {
+		{ "<leader>rc", "<CMD>RunCode<CR>", desc = "Run code", mode = { "n" } },
+	},
 }
