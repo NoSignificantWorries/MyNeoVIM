@@ -24,6 +24,14 @@ return {
           { icon = " ", key = "k", desc = "Keymaps", action = ":lua Snacks.picker.keymaps()" },
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
+
+				header = [[
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
 			},
 			sections = {
 				{ section = "header" },
@@ -41,8 +49,16 @@ return {
 		scroll = { enabled = false },
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
+		lazygit = { enabled = true },
 	},
 	keys = {
+		{
+			"<leader>gl",
+			function()
+				Snacks.lazygit()
+			end,
+			desc = "Open lazygit",
+		},
 		-- Find
 		{
 			"<leader><leader>b",
