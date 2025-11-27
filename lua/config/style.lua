@@ -45,7 +45,7 @@ local border_styles = {
 	},
 }
 
-vim.opt.fillchars = border_styles.double
+vim.opt.fillchars = border_styles.slim
 
 local use_spec_border_color = false
 local spec_border_color = "#5de4c7"

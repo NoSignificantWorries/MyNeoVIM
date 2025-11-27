@@ -12,6 +12,7 @@ return {
 				jsonc = { "prettier" },
 				-- go = { "gofumpt" },
 				go = { "goimports" },
+				kdl = { "kdlfmt" },
 			},
 			formatters = {
 				ruff_format = {

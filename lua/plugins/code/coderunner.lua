@@ -18,6 +18,7 @@ return {
 			filetype = {
 				python = "python3 -u",
 				go = "go run",
+				lua = "lua",
 			},
 		})
 	end,

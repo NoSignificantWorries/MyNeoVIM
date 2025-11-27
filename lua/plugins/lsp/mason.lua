@@ -31,6 +31,7 @@ return {
 					"lemminx",
 					"clangd",
 					"dockerls",
+					"sqlls",
 				},
 				automatic_installation = true,
 			})
@@ -51,8 +52,10 @@ return {
 					"prettier",
 					"goimports",
 					"rustfmt",
+					"kdlfmt",
 					-- "gofumpt",
 					-- linters
+					"eugene",
 					"luacheck",
 					"gospel",
 				},
