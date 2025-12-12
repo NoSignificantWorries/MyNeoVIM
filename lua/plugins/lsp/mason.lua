@@ -27,7 +27,6 @@ return {
 					"pyright",
 					"gopls",
 					"rust_analyzer",
-					"qmlls",
 					"lemminx",
 					"clangd",
 					"dockerls",

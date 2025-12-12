@@ -1,6 +1,4 @@
 #!/bin/sh
 
-mkdir -p "$HOME/.local/share/nvim/neovim-project"
-
-ln -sf $HOME/.config/nvim/history $HOME/.local/share/nvim/neovim-project/history
+ln -sf $HOME/.config/nvim/config.toml $HOME/.config/neovide/config.toml
 

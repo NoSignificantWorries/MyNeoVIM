@@ -37,6 +37,7 @@ return {
 				"toml",
 				"dockerfile",
 				"sql",
+				"yuck",
 				"gitignore",
 				"ninja",
 				"rst",

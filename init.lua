@@ -13,4 +13,6 @@ else
 	require("core.autocmds")
 	-- vim.g.python3_host_prog = vim.fn.expand("~/.config/nvim/.nvim-venv/bin/python3")
 	require("custom.jupyter")
+
+	require("neovide").setup()
 end
