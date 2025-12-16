@@ -10,6 +10,7 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"onsails/lspkind.nvim",
 	},
+	event = "InsertEnter",
 	config = function(_, opts)
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")

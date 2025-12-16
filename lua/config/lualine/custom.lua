@@ -30,7 +30,7 @@ config = {
 		icons_enabled = true,
 		theme = "auto",
 		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
 			winbar = {},
@@ -65,8 +65,7 @@ config = {
 				icon = "",
 			},
 		},
-		lualine_b = {},
-		lualine_c = {
+		lualine_b = {
 			{
 				"filetype",
 				icon_only = true,
@@ -78,6 +77,8 @@ config = {
 				cond = conditions.buffer_not_empty,
 				padding = { left = 1, right = 1 },
 			},
+		},
+		lualine_c = {
 			{
 				"branch",
 				icon = "",
@@ -91,6 +92,7 @@ config = {
 				colored = true,
 				always_visible = true,
 			},
+			{ "macro_recording", "%S" },
 		},
 		lualine_x = {
 			{
@@ -121,6 +123,8 @@ config = {
 					return msg
 				end,
 			},
+		},
+		lualine_y = {
 			{
 				"venv-selector",
 			},
@@ -142,7 +146,6 @@ config = {
 				-- color = { fg = colors.lsp },
 			},
 		},
-		lualine_y = {},
 		lualine_z = {
 			{
 				function()

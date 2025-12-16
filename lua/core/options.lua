@@ -3,21 +3,29 @@ local o = vim.o
 o.cursorlineopt = "both"
 
 --vim settings
-vim.cmd("set expandtab")
-vim.cmd("set smarttab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set autoindent")
-vim.cmd("set smartindent")
+o.expandtab = true
+o.smarttab = true
+o.tabstop = 2
+o.softtabstop = 2
+o.shiftwidth = 2
+o.autoindent = true
+o.smartindent = true
 
-vim.cmd("set number")
-vim.cmd("set relativenumber")
+o.number = true
+o.relativenumber = true
 
 vim.cmd("syntax on")
-vim.cmd("set termguicolors")
+o.termguicolors = true
 
-vim.cmd("set so=12")
+o.so = 12
+
+if vim.g.neovide then
+	o.termguicolors = true
+	o.background = "dark"
+	o.pumblend = 20
+	o.winblend = 40
+	o.wildoptions = "pum"
+end
 
 o.foldmethod = "expr"
 o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
