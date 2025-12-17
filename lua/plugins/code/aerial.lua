@@ -1,5 +1,6 @@
 return {
 	"stevearc/aerial.nvim",
+	event = "BufRead",
 	opts = {
 		layout = { min_width = 28, default_direction = "float" },
 		attach_mode = "global",

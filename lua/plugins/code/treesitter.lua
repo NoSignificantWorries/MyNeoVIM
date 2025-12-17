@@ -46,7 +46,8 @@ return {
 				"go",
 				"c",
 				"rust",
-				"hyprlang",
+				"latex",
+				"nix",
 			},
 			incremental_selection = {
 				enable = true,

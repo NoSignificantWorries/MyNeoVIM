@@ -1,5 +1,5 @@
 return {
-  "GCBallesteros/jupytext.nvim",
-  config = true,
+	"GCBallesteros/jupytext.nvim",
+	event = "BufRead",
+	config = true,
 }
-

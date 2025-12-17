@@ -13,6 +13,7 @@ return {
 				-- go = { "gofumpt" },
 				go = { "goimports" },
 				kdl = { "kdlfmt" },
+				nix = { "nixfmt" },
 			},
 			formatters = {
 				ruff_format = {

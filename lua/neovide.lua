@@ -5,6 +5,7 @@ M.setup = function()
 		return
 	end
 	vim.g.neovide_scale_factor = 0.9
+	-- vim.g.neovide_cursor_vfx_mode = "ripple"
 	vim.o.guifont = "JetBrainsMono Nerd Font:h14"
 	vim.g.neovide_floating_corner_radius = 0.25
 

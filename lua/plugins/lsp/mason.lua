@@ -31,6 +31,7 @@ return {
 					"clangd",
 					"dockerls",
 					"sqlls",
+					"nil",
 				},
 				automatic_installation = true,
 			})
@@ -52,7 +53,7 @@ return {
 					"goimports",
 					"rustfmt",
 					"kdlfmt",
-					-- "gofumpt",
+					"nixpkgs-fmt",
 					-- linters
 					"eugene",
 					"luacheck",

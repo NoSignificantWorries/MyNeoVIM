@@ -1,5 +1,6 @@
 return {
 	"isakbm/gitgraph.nvim",
+	event = "VeryLazy",
 	dependencies = { "sindrets/diffview.nvim" },
 	---@type I.GGConfig
 	opts = {

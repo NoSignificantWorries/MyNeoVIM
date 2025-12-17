@@ -1,5 +1,6 @@
 return {
 	"praem90/db.nvim",
+	event = "VeryLazy",
 	config = function()
 		require("db").setup({
 			dependencies = {

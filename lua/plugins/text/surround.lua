@@ -1,5 +1,6 @@
 return {
 	"nvim-mini/mini.surround",
+	event = "BufRead",
 	version = false,
 	config = function()
 		require("mini.surround").setup({
