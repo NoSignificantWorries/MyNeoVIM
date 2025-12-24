@@ -21,6 +21,7 @@ require("lazy").setup({
 		{ import = "plugins.text" },
 		{ import = "plugins.movement" },
 		{ import = "plugins" },
+		{ import = "plugins.org" },
 		{ import = "plugins.lsp" },
 		{ import = "plugins.code" },
 		{ import = "plugins.colors" },
