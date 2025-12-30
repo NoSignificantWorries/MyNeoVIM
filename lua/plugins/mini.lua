@@ -31,6 +31,6 @@ return {
 		})
 	end,
 	keys = {
-		{ "<leader>e", "<CMD>lua MiniFiles.open()<CR>", desc = "Open mini.files" },
+		{ "<leader>e", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0), false)<CR>", desc = "Open mini.files" },
 	},
 }
