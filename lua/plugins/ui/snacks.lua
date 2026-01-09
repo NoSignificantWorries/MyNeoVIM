@@ -39,7 +39,7 @@ return {
 				{ section = "startup" },
 			},
 		},
-		explorer = { enabled = true },
+		explorer = { enabled = false },
 		image = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
@@ -52,13 +52,6 @@ return {
 		lazygit = { enabled = true },
 	},
 	keys = {
-		{
-			"<leader>/",
-			function()
-				Snacks.explorer.open()
-			end,
-			desc = "Open snacks.explorer",
-		},
 		{
 			"<leader>gl",
 			function()

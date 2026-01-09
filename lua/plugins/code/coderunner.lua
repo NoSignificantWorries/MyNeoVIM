@@ -1,6 +1,6 @@
 return {
 	"CRAG666/code_runner.nvim",
-	ft = { "python", "go", "lua" },
+	ft = { "python", "go", "lua", "rust" },
 	dependencies = {
 		"preservim/vimux",
 		"akinsho/toggleterm.nvim",
@@ -20,6 +20,7 @@ return {
 				python = "python3 -u",
 				go = "go run",
 				lua = "lua",
+				rust = "cargo run",
 			},
 		})
 	end,

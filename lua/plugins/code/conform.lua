@@ -10,7 +10,7 @@ return {
 				python = { "ruff" },
 				json = { "prettier" },
 				jsonc = { "prettier" },
-				-- go = { "gofumpt" },
+				rust = { "rustfmt" },
 				go = { "goimports" },
 				kdl = { "kdlfmt" },
 				nix = { "nixfmt" },

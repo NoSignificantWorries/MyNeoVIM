@@ -21,10 +21,13 @@ vim.api.nvim_set_keymap("n", "<Right>", "<Nop>", { noremap = true })
 map("n", "<C-Tab>", "<CMD>bnext<CR>", { desc = "Go to next buffer" })
 map("n", "<C-S-Tab>", "<CMD>bprevious<CR>", { desc = "Go to previous buffer" })
 
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-l>", "<C-w>l")
+map("n", "<leader>h", "<C-w>h")
+map("n", "<leader>j", "<C-w>j")
+map("n", "<leader>k", "<C-w>k")
+map("n", "<leader>l", "<C-w>l")
+map("n", "<leader>q", "<C-w>q")
+map("n", "<leader>s", "<C-w>s")
+map("n", "<leader>v", "<C-w>v")
 
 -- lsp
 map("n", "<leader>d", "<CMD>lua vim.diagnostic.open_float()<CR>", { desc = "Show diagnostics under cursor" })
