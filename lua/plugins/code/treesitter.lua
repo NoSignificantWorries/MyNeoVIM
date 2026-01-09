@@ -48,6 +48,7 @@ return {
 				"rust",
 				"latex",
 				"nix",
+				"typst",
 			},
 			incremental_selection = {
 				enable = true,

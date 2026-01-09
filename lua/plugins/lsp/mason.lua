@@ -31,7 +31,7 @@ return {
 					"clangd",
 					"dockerls",
 					"sqlls",
-					"nil",
+					"tinymist",
 				},
 				automatic_installation = true,
 			})
@@ -54,6 +54,7 @@ return {
 					"rustfmt",
 					"kdlfmt",
 					"nixpkgs-fmt",
+					"typstfmt",
 					-- linters
 					"eugene",
 					"luacheck",
