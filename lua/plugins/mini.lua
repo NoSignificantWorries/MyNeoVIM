@@ -26,11 +26,6 @@ return {
 		require("mini.trailspace").setup({})
 		require("mini.ai").setup({})
 		require("mini.icons").setup({})
-		require("mini.files").setup({
-			windows = { preview = true },
-		})
 	end,
-	keys = {
-		{ "<leader>e", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0), false)<CR>", desc = "Open mini.files" },
-	},
+	keys = {},
 }

@@ -98,7 +98,7 @@ return {
 		})
 	end,
 	keys = {
-		{ "<leader>/", "<CMD>Neotree left toggle focus<CR>", desc = "Toggle sidebar neo-tree", mode = { "n" } },
+		{ "<leader>e", "<CMD>Neotree left toggle focus<CR>", desc = "Toggle sidebar neo-tree", mode = { "n" } },
 		{
 			"<leader>b",
 			"<CMD>Neotree float toggle buffers<CR>",
@@ -106,6 +106,6 @@ return {
 			mode = { "n" },
 		},
 		{ "<leader>o", "<CMD>Neotree float toggle<CR>", desc = "Toggle floating neo-tree", mode = { "n" } },
-		{ "<localleader>e", "<CMD>Neotree focus<CR>", desc = "Toggle sidebar neo-tree focus", mode = { "n" } },
+		{ "<leader>'", "<CMD>Neotree focus<CR>", desc = "Toggle sidebar neo-tree focus", mode = { "n" } },
 	},
 }
