@@ -49,6 +49,7 @@ return {
 				"latex",
 				"nix",
 				"typst",
+				"commonlisp",
 			},
 			incremental_selection = {
 				enable = true,
