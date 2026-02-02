@@ -50,6 +50,7 @@ return {
 				"nix",
 				"typst",
 				"commonlisp",
+				"glsl",
 			},
 			incremental_selection = {
 				enable = true,
