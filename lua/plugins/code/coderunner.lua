@@ -21,6 +21,7 @@ return {
 				go = "go run",
 				lua = "lua",
 				rust = "cargo run",
+				typst = "typst compile",
 			},
 		})
 	end,
