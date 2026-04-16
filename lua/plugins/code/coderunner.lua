@@ -22,6 +22,8 @@ return {
 				lua = "lua",
 				rust = "cargo run",
 				typst = "typst compile",
+				markdown = "quickmd",
+				html = "xdg-open",
 			},
 		})
 	end,

@@ -75,3 +75,5 @@ vim.diagnostic.config({
 vim.o.winborder = "rounded"
 
 vim.api.nvim_set_hl(0, "CodewindowBorder", { fg = "#313244" })
+
+vim.opt.fillchars = { eob = " " }

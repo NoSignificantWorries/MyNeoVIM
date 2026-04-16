@@ -1,9 +1,5 @@
 local map = vim.keymap.set
 
--- Exit INSERT mode
-map("i", "jj", "<ESC>", { desc = "ESC remap" })
-map("i", "оо", "<ESC>", { desc = "ESC remap" })
-
 -- Terminal working
 map("t", "<A-q>", "<C-\\><C-n>", { desc = "Quit terminal mode" })
 map("t", "<C-k>", "<C-\\><C-n><C-w>k")
@@ -11,22 +7,26 @@ map("t", "<C-j>", "<C-\\><C-n><C-w>j")
 map("t", "<C-h>", "<C-\\><C-n><C-w>h")
 map("t", "<C-l>", "<C-\\><C-n><C-w>l")
 
---Disconnecting arrows
+--Disconnecting arrows in normal
 vim.api.nvim_set_keymap("n", "<Up>", "<Nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Down>", "<Nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Left>", "<Nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Right>", "<Nop>", { noremap = true })
+-- Bind arrows in insert
+map("i", "<C-l>", "<Right>")
+map("i", "<C-h>", "<Left>")
 
 -- Buffers working
-map("n", "<C-Tab>", "<CMD>bnext<CR>", { desc = "Go to next buffer" })
-map("n", "<C-S-Tab>", "<CMD>bprevious<CR>", { desc = "Go to previous buffer" })
+-- map("n", "<C-Tab>", "<CMD>bnext<CR>", { desc = "Go to next buffer" })
+-- map("n", "<C-S-Tab>", "<CMD>bprevious<CR>", { desc = "Go to previous buffer" })
 
+-- Windows
 map("n", "<leader>h", "<C-w>h")
 map("n", "<leader>j", "<C-w>j")
 map("n", "<leader>k", "<C-w>k")
 map("n", "<leader>l", "<C-w>l")
 map("n", "<leader>q", "<C-w>q")
-map("n", "<leader>s", "<C-w>s")
+-- map("n", "<leader>s", "<C-w>s")
 map("n", "<leader>v", "<C-w>v")
 
 -- lsp

@@ -20,3 +20,13 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.foldenable = false
 	end,
 })
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+	callback = function()
+		local last_line = vim.api.nvim_buf_get_lines(0, -2, -1, false)[1]
+		if last_line ~= "" then
+			vim.api.nvim_buf_set_lines(0, -1, -1, false, { "" })
+		end
+	end,
+})
+

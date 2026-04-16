@@ -1,5 +1,6 @@
 return {
 	"coffebar/neovim-project",
+	event = "VeryLazy",
 	opts = {
 		projects = {
 			"~/Projects/*",
@@ -26,6 +27,6 @@ return {
 		{ "folke/snacks.nvim" },
 		{ "Shatur/neovim-session-manager" },
 	},
-	lazy = false,
-	priority = 100,
+	-- lazy = false,
+	-- priority = 100,
 }

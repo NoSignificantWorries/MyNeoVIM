@@ -18,7 +18,7 @@ return {
 			formatters = {
 				ruff_format = {
 					prepend_args = {
-						"--fix",
+						-- "--fix",
 					},
 				},
 			},

@@ -12,7 +12,10 @@ else
 	require("config.colorscheme")
 	require("core.autocmds")
 	-- vim.g.python3_host_prog = vim.fn.expand("~/.config/nvim/.nvim-venv/bin/python3")
-	require("custom.jupyter")
+	require("functional.floating")
+
+	-- local bongocat = require("bongocat")
+	-- bongocat.setup_lualine()
 
 	require("neovide").setup()
 end

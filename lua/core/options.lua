@@ -13,11 +13,12 @@ o.smartindent = true
 
 o.number = true
 o.relativenumber = true
+o.scrolloff = 20
+o.so = 12
+vim.cmd("set formatoptions-=cro")
 
 vim.cmd("syntax on")
 o.termguicolors = true
-
-o.so = 12
 
 if vim.g.neovide then
 	o.termguicolors = true

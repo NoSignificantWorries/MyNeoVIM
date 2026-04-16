@@ -64,6 +64,13 @@ config = {
 				"mode",
 				icon = "",
 			},
+			{
+				function()
+					return require("bongo-cat").get_icon()
+				end,
+				padding = { left = 0, right = 3 },
+				icons_enabled = false,
+			},
 		},
 		lualine_b = {
 			{
@@ -111,7 +118,7 @@ config = {
 				function()
 					local msg = ""
 					-- local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-					local clients = vim.lsp.get_active_clients()
+					local clients = vim.lsp.get_clients()
 					if next(clients) == nil then
 						return msg
 					end
@@ -131,7 +138,7 @@ config = {
 			{
 				function()
 					local msg = "No Active Lsp"
-					local clients = vim.lsp.get_active_clients()
+					local clients = vim.lsp.get_clients()
 					if next(clients) == nil then
 						return msg
 					end

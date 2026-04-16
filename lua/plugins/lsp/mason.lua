@@ -1,6 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
+		cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUpdate" },
 		config = function()
 			local mason = require("mason")
 			mason.setup({
@@ -16,6 +17,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"williamboman/mason.nvim",
 			"neovim/nvim-lspconfig",
@@ -32,6 +34,8 @@ return {
 					"dockerls",
 					"sqlls",
 					"tinymist",
+					"cssls",
+					"biome",
 				},
 				automatic_installation = true,
 			})
@@ -39,9 +43,10 @@ return {
 	},
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"williamboman/mason.nvim",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			-- "WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
 		config = function()
 			require("mason-tool-installer").setup({
@@ -67,10 +72,11 @@ return {
 	},
 	{
 		"jay-babu/mason-nvim-dap.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"williamboman/mason.nvim",
 			"mfussenegger/nvim-dap",
-			"jay-babu/mason-nvim-dap.nvim",
+			-- "jay-babu/mason-nvim-dap.nvim",
 		},
 		config = function()
 			require("mason-nvim-dap").setup({
