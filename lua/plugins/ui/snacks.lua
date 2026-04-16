@@ -47,7 +47,7 @@ return {
 		},
 		image = { enabled = true },
 		indent = { enabled = true },
-		input = { enabled = true },
+		input = { enabled = false },
 		notifier = { enabled = false },
 		quickfile = { enabled = true },
 		scope = { enabled = true },
