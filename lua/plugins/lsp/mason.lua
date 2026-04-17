@@ -1,91 +1,66 @@
 return {
-	{
-		"williamboman/mason.nvim",
-		cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUpdate" },
-		config = function()
-			local mason = require("mason")
-			mason.setup({
-				ui = {
-					icons = {
-						package_installed = "✓",
-						package_pending = "➜",
-						package_uninstalled = "✗",
-					},
-				},
-			})
-		end,
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		dependencies = {
-			"williamboman/mason.nvim",
-			"neovim/nvim-lspconfig",
-		},
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"lua_ls",
-					"pyright",
-					"gopls",
-					"rust_analyzer",
-					"lemminx",
-					"clangd",
-					"dockerls",
-					"sqlls",
-					"tinymist",
-					"cssls",
-					"biome",
-				},
-				automatic_installation = true,
-			})
-		end,
-	},
-	{
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			"williamboman/mason.nvim",
-			-- "WhoIsSethDaniel/mason-tool-installer.nvim",
-		},
-		config = function()
-			require("mason-tool-installer").setup({
-				ensure_installed = {
-					"ruff",
-					-- formatters
-					"stylua",
-					"prettier",
-					"goimports",
-					"rustfmt",
-					"kdlfmt",
-					"nixpkgs-fmt",
-					"typstfmt",
-					-- linters
-					"eugene",
-					"luacheck",
-					"gospel",
-				},
-				auto_update = true,
-				automatic_installation = true,
-			})
-		end,
-	},
-	{
-		"jay-babu/mason-nvim-dap.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			"williamboman/mason.nvim",
-			"mfussenegger/nvim-dap",
-			-- "jay-babu/mason-nvim-dap.nvim",
-		},
-		config = function()
-			require("mason-nvim-dap").setup({
-				ensure_installed = {
-					"debugpy",
-				},
-				automatic_setup = true,
-				automatic_installation = true,
-			})
-		end,
-	},
+  -- 1. Основной Mason — только для установки пакетов
+  {
+    "williamboman/mason.nvim",
+    cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUpdate" },
+    build = ":MasonUpdate", -- Автообновление реестра
+    config = function()
+      require("mason").setup({
+        ui = {
+          icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗",
+          },
+        },
+      })
+    end,
+  },
+
+  -- 2. Единый установщик для ВСЕГО (LSP, линтеры, форматеры, DAP)
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    event = "VeryLazy",
+    dependencies = { "williamboman/mason.nvim" },
+    config = function()
+      require("mason-tool-installer").setup({
+        -- ВСЕ тулы в одном списке (LSP + линтеры + форматеры + DAP)
+        ensure_installed = {
+          -- LSP серверы
+          "lua_ls",
+          "pyright",
+          "gopls",
+          "rust_analyzer",
+          "lemminx",
+          "clangd",
+          "dockerls",
+          "sqlls",
+          "tinymist",
+          "cssls",
+          "biome",
+
+          -- Линтеры и форматеры
+          "ruff",
+          "stylua",
+          "prettier",
+          "goimports",
+          "rustfmt",
+          "kdlfmt",
+          "nixpkgs-fmt",
+          "typstfmt",
+          "eugene",
+          "luacheck",
+          "gospel",
+
+          -- DAP дебаггеры
+          "debugpy",
+        },
+        auto_update = true,
+        run_on_start = true, -- Установит всё при старте Neovim
+        start_delay = 3000,   -- Задержка чтобы не тормозить запуск
+        debounce_hours = 168, -- Проверять обновления раз в неделю
+      })
+    end,
+  },
 }
+

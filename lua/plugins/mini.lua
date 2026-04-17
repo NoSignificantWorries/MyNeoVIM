@@ -3,6 +3,7 @@ return {
 	version = "*",
 	event = "VeryLazy",
 	config = function()
+		require("mini.icons").setup({})
 		require("mini.surround").setup({
 			mappings = {
 				highlight_duration = 1500,
@@ -25,7 +26,6 @@ return {
 		require("mini.move").setup({})
 		require("mini.trailspace").setup({})
 		require("mini.ai").setup({})
-		require("mini.icons").setup({})
 	end,
 	keys = {},
 }

@@ -4,18 +4,16 @@ else
 	vim.g.mapleader = " "
 	vim.g.maplocalleader = "\\"
 
-	require("core.options")
-	require("core.keymaps")
+	require("config.options")
+	require("config.keymaps")
 	require("config.lazy")
 	-- require("plugins.lang.lua")
 	require("config.style")
-	require("config.colorscheme")
-	require("core.autocmds")
-	-- vim.g.python3_host_prog = vim.fn.expand("~/.config/nvim/.nvim-venv/bin/python3")
-	require("functional.floating")
 
-	-- local bongocat = require("bongocat")
-	-- bongocat.setup_lualine()
+	vim.cmd.colorscheme("catppuccin-nvim")
+
+	require("config.autocmds")
+	require("lsp")
 
 	require("neovide").setup()
 end
