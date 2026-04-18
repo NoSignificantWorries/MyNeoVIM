@@ -10,8 +10,6 @@ else
 	-- require("plugins.lang.lua")
 	require("config.style")
 
-	vim.cmd.colorscheme("catppuccin-nvim")
-
 	require("config.autocmds")
 	require("lsp")
 

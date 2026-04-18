@@ -4,7 +4,8 @@ return {
 	opts = {
 		cmdline = {
 			enabled = true,
-			view = "cmdline_popup",
+			-- view = "cmdline_popup",
+			view = "cmdline",
 		},
 		format = {
 			cmdline = { pattern = "^:", icon = "", lang = "vim" },
@@ -17,9 +18,9 @@ return {
 		},
 		messages = {
 			enabled = true,
-			view = "notify",
-			view_error = "notify",
-			view_warn = "notify",
+			view = "mini",
+			view_error = "mini",
+			view_warn = "mini",
 			view_history = "messages",
 			view_search = "virtualtext",
 		},
@@ -33,6 +34,18 @@ return {
 				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
 				["vim.lsp.util.stylize_markdown"] = true,
 				["cmp.entry.get_documentation"] = true,
+			},
+		},
+		views = {
+			mini = {
+				position = { row = "95%", col = "100%" },
+				size = { width = "auto", height = "auto" },
+				border = { style = "none" },
+			},
+			cmdline = {
+				position = { row = "20%", col = "50%" },
+				size = { width = "30%", height = 1 },
+				border = { style = "rounded" },
 			},
 		},
 		routes = {
@@ -59,14 +72,14 @@ return {
 	},
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
+		-- "rcarriga/nvim-notify",
 	},
 
-	config = function()
-		require("notify").setup({
-			background_colour = "#1e222a",
-		})
+	config = function(_, opts)
+		-- require("notify").setup({
+		-- 	background_colour = "#1e222a",
+		-- })
 
-		require("noice").setup({})
+		require("noice").setup(opts)
 	end,
 }

@@ -15,14 +15,14 @@ return {
         ---@type snacks.dashboard.Item[]
         keys = {
           { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-          { icon = "󰈭 ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
-          { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-          { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+          -- { icon = "󰈭 ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+          -- { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+          -- { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
           { icon = " ", key = "p", desc = "Open Project", action = ":NeovimProjectHistory" },
           { icon = " ", key = "d", desc = "Open Projects Discoverer", action = ":NeovimProjectDiscover" },
-          { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+          -- { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
-          { icon = " ", key = "k", desc = "Keymaps", action = ":lua Snacks.picker.keymaps()" },
+          -- { icon = " ", key = "k", desc = "Keymaps", action = ":lua Snacks.picker.keymaps()" },
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
 
@@ -35,16 +35,18 @@ return {
 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
 			},
 			sections = {
-				{ section = "header" },
-				{ section = "keys", gap = 1, padding = 1 },
-				{ section = "startup" },
+				-- { section = "header" },
+				{
+					section = "terminal",
+					cmd = "jp2a --colors --color-depth=24 --size=60x30 ~/Pictures/vim-pixels.png",
+					height = 30,
+					padding = 1,
+				},
+				-- { pane = 2, section = "keys", gap = 1, padding = 1 },
+				-- { section = "startup" },
 			},
 		},
-		explorer = {
-			enabled = true,
-			hidden = true,
-			ignored = true,
-		},
+		explorer = { enabled = false },
 		image = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = false },
@@ -65,13 +67,13 @@ return {
 		lazygit = { enabled = true },
 	},
 	keys = {
-		{
-			"<leader>e",
-			function()
-				Snacks.explorer()
-			end,
-			desc = "Toggle explorer",
-		},
+		-- {
+		-- 	"<leader>e",
+		-- 	function()
+		-- 		Snacks.explorer()
+		-- 	end,
+		-- 	desc = "Toggle explorer",
+		-- },
 		{
 			"<leader>gl",
 			function()
