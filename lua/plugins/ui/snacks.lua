@@ -38,7 +38,7 @@ return {
 				-- { section = "header" },
 				{
 					section = "terminal",
-					cmd = "jp2a --colors --color-depth=24 --size=60x30 ~/Pictures/vim-pixels.png",
+					cmd = "jp2a --colors --color-depth=24 --size=60x30 ~/.config/nvim/assets/vim-logo.png",
 					height = 30,
 					padding = 1,
 				},
