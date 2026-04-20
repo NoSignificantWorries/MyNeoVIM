@@ -38,12 +38,16 @@ return {
 				-- { section = "header" },
 				{
 					section = "terminal",
-					cmd = "jp2a --colors --color-depth=24 --size=60x30 ~/.config/nvim/assets/vim-logo.png",
-					height = 30,
-					padding = 1,
+					-- cmd = "jp2a --colors --color-depth=24 --size=60x30 ~/.config/nvim/assets/vim-logo.png; sleep .1",
+					cmd = "~/.config/nvim/logo.sh; sleep .1",
+					height = 3,
+					padding = 2,
+					gap = 1,
+					indent = 25,
 				},
+				{ section = "keys", gap = 1, padding = 3 },
 				-- { pane = 2, section = "keys", gap = 1, padding = 1 },
-				-- { section = "startup" },
+				{ section = "startup", icon = "" },
 			},
 		},
 		explorer = { enabled = false },
@@ -66,6 +70,14 @@ return {
 		words = { enabled = true },
 		lazygit = { enabled = true },
 	},
+	config = function(_, opt)
+		require("snacks").setup(opt)
+		vim.api.nvim_set_hl(0, "SnacksDashboardKey", { fg = "#89dceb", bold = true })
+		vim.api.nvim_set_hl(0, "SnacksDashboardDesc", { fg = "#45475a", italic = true })
+		vim.api.nvim_set_hl(0, "SnacksDashboardIcon", { fg = "#6c7086" })
+		vim.api.nvim_set_hl(0, "SnacksDashboardSpecial", { fg = "#b4befe", bold = true })
+		vim.api.nvim_set_hl(0, "SnacksDashboardFooter", { fg = "#585b70", bold = false })
+	end,
 	keys = {
 		-- {
 		-- 	"<leader>e",
