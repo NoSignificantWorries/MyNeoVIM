@@ -15,6 +15,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	callback = function()
+		vim.defer_fn(function()
+			pcall(vim.treesitter.start)
+		end, 50)
+	end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
 	pattern = "snacks_dashboard",
 	callback = function()
 		vim.opt_local.foldenable = false
@@ -29,4 +38,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		end
 	end,
 })
-

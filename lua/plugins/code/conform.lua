@@ -14,6 +14,10 @@ return {
 				go = { "goimports" },
 				kdl = { "kdlfmt" },
 				nix = { "nixfmt" },
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				javascriptreact = { "prettierd" },
+				typescriptreact = { "prettierd" },
 			},
 			formatters = {
 				ruff_format = {

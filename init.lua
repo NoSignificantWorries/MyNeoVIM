@@ -1,6 +1,8 @@
 if vim.g.vscode then
 	require("vscode-init").setup()
 else
+	vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin:" .. vim.env.PATH
+
 	vim.g.mapleader = " "
 	vim.g.maplocalleader = "\\"
 
