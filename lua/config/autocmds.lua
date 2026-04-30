@@ -14,11 +14,23 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		vim.defer_fn(function()
+-- 			pcall(vim.treesitter.start)
+-- 		end, 50)
+-- 	end,
+-- })
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
 	callback = function()
 		vim.defer_fn(function()
 			pcall(vim.treesitter.start)
+			if vim.bo.filetype == "python" then
+				vim.bo.indentexpr = ""
+			end
 		end, 50)
 	end,
 })

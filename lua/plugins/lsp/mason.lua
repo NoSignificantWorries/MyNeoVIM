@@ -45,10 +45,8 @@ return {
 					"stylua",
 					"prettier",
 					"goimports",
-					"rustfmt",
-					"kdlfmt",
+					-- "kdlfmt",
 					"nixpkgs-fmt",
-					"typstfmt",
 					"eugene",
 					"luacheck",
 					"gospel",
@@ -57,9 +55,9 @@ return {
 					"debugpy",
 				},
 				auto_update = true,
-				run_on_start = true, -- Установит всё при старте Neovim
-				start_delay = 3000, -- Задержка чтобы не тормозить запуск
-				debounce_hours = 168, -- Проверять обновления раз в неделю
+				run_on_start = true,
+				start_delay = 3000,
+				debounce_hours = 168,
 			})
 		end,
 	},

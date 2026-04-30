@@ -26,6 +26,7 @@ return {
 		require("mini.move").setup({})
 		require("mini.trailspace").setup({})
 		require("mini.ai").setup({})
+		require("mini.indentscope").setup({})
 	end,
 	keys = {},
 }

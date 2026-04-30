@@ -6,7 +6,20 @@ return {
 	---@type snacks.Config
 	opts = {
 		bigfile = { enabled = true },
-		picker = { enabled = true },
+		picker = {
+			enabled = true,
+			layout = {
+				preset = "vscode",
+			},
+			sources = {
+				explorer = {
+					hidden = true,
+					ignored = true,
+					auto_close = true,
+					layout = { preset = "sidebar", preview = true },
+				},
+			},
+		},
 		dashboard = {
 			enabled = true,
 			preset = {
@@ -20,6 +33,7 @@ return {
           -- { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
           { icon = " ", key = "p", desc = "Open Project", action = ":NeovimProjectHistory" },
           { icon = " ", key = "d", desc = "Open Projects Discoverer", action = ":NeovimProjectDiscover" },
+          { icon = "󰖬 ", key = "w", desc = "Open Wiki main page", action = ":WikiIndex" },
           -- { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
           -- { icon = " ", key = "k", desc = "Keymaps", action = ":lua Snacks.picker.keymaps()" },
@@ -50,13 +64,15 @@ return {
 				{ section = "startup", icon = "" },
 			},
 		},
-		explorer = { enabled = false },
+		explorer = {
+			enabled = true,
+		},
 		image = { enabled = true },
-		indent = { enabled = true },
+		indent = { enabled = false },
+		quickfile = { enabled = true },
 		input = { enabled = false },
 		notifier = { enabled = false },
-		quickfile = { enabled = true },
-		scope = { enabled = true },
+		scope = { enabled = false },
 		scroll = { enabled = false },
 		statuscolumn = {
 			enabled = true,
@@ -79,13 +95,29 @@ return {
 		vim.api.nvim_set_hl(0, "SnacksDashboardFooter", { fg = "#585b70", bold = false })
 	end,
 	keys = {
-		-- {
-		-- 	"<leader>e",
-		-- 	function()
-		-- 		Snacks.explorer()
-		-- 	end,
-		-- 	desc = "Toggle explorer",
-		-- },
+		{
+			"<leader>e",
+			function()
+				Snacks.picker.explorer({
+					auto_close = true,
+					layout = {
+						preset = "select",
+						layout = {
+							width = 0.25,
+							height = 0.7,
+						},
+					},
+				})
+			end,
+			desc = "Toggle explorer",
+		},
+		{
+			"<leader>u",
+			function()
+				Snacks.picker.explorer()
+			end,
+			desc = "Toggle explorer",
+		},
 		{
 			"<leader>gl",
 			function()

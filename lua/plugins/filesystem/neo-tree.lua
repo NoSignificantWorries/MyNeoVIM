@@ -66,6 +66,11 @@ return {
 				-- 	folder_empty = "󰉒",
 				-- 	default = "",
 				-- },
+				icon = {
+					folder_closed = "[+]",
+					folder_open = "[-]",
+					folder_empty = "[.]",
+				},
 				git_status = {
 					symbols = {
 						added = "",
@@ -98,13 +103,13 @@ return {
 		})
 	end,
 	keys = {
-		{ "<leader>E", "<CMD>Neotree left toggle focus<CR>", desc = "Toggle sidebar neo-tree", mode = { "n" } },
-		{
-			"<leader>b",
-			"<CMD>Neotree float toggle buffers<CR>",
-			desc = "Toggle floating neo-tree buffers",
-			mode = { "n" },
-		},
-		{ "<leader>e", "<CMD>Neotree float toggle<CR>", desc = "Toggle floating neo-tree", mode = { "n" } },
+		-- { "<leader>E", "<CMD>Neotree left toggle focus<CR>", desc = "Toggle sidebar neo-tree", mode = { "n" } },
+		-- {
+		-- 	"<leader>b",
+		-- 	"<CMD>Neotree float toggle buffers<CR>",
+		-- 	desc = "Toggle floating neo-tree buffers",
+		-- 	mode = { "n" },
+		-- },
+		-- { "<leader>e", "<CMD>Neotree float toggle<CR>", desc = "Toggle floating neo-tree", mode = { "n" } },
 	},
 }

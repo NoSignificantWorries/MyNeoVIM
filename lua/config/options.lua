@@ -11,6 +11,12 @@ o.shiftwidth = 2
 o.autoindent = true
 o.smartindent = true
 
+o.textwidth = 120
+o.wrap = true
+o.linebreak = true
+o.breakindent = true
+o.showbreak = "↳ "
+
 o.number = true
 o.relativenumber = true
 -- o.scrolloff = 20
