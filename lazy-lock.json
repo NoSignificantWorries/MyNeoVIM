@@ -1,4 +1,5 @@
 {
+  "barbar.nvim": { "branch": "master", "commit": "a4bef5b4fc1f064f2f673172252028eae18191c9" },
   "blink.cmp": { "branch": "main", "commit": "78336bc89ee5365633bcf754d93df01678b5c08f" },
   "bongocat.nvim": { "branch": "main", "commit": "d53ba3a13efd286121b68045df019b271a4426fe" },
   "catppuccin": { "branch": "main", "commit": "426dbebe06b5c69fd846ceb17b42e12f890aedf1" },
@@ -13,6 +14,7 @@
   "langmapper.nvim": { "branch": "main", "commit": "49462fd9f4f33cf8cfbaa779ba07d3c0b255cc06" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "marks.nvim": { "branch": "master", "commit": "f353e8c08c50f39e99a9ed474172df7eddd89b72" },
+  "markview.nvim": { "branch": "main", "commit": "8b82823bbe7b452c5920ab22947e186c6cb067b4" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "443f1ef8b5e6bf47045cb2217b6f748a223cf7dc" },
   "mason.nvim": { "branch": "main", "commit": "12ddd182d9efbdc848b540f16484a583d52da0fb" },
   "mini.icons": { "branch": "main", "commit": "bac6317300e205335df425296570d84322730067" },
