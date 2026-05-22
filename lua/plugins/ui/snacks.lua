@@ -15,8 +15,8 @@ return {
 				explorer = {
 					hidden = true,
 					ignored = true,
-					auto_close = true,
-					layout = { preset = "sidebar", preview = true },
+					auto_close = false,
+					layout = { preset = "sidebar", layout = { position = "right" }, preview = false },
 				},
 			},
 		},
@@ -105,6 +105,7 @@ return {
 						layout = {
 							width = 0.25,
 							height = 0.7,
+							position = "float",
 						},
 					},
 				})

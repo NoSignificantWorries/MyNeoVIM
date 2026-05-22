@@ -10,6 +10,7 @@ return {
 					"mode",
 					"path",
 					"git",
+					require("opencode").statusline,
 				},
 				center = {},
 				right = {
