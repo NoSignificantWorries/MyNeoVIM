@@ -16,4 +16,6 @@ else
 	require("lsp")
 
 	require("neovide").setup()
+	-- vim.o.background = "light" -- or "light" for light mode
+	-- vim.cmd([[colorscheme gruvbox]])
 end
