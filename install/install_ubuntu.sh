@@ -54,3 +54,9 @@ fc-cache -fv
 
 echo "=== Fonts installation done ==="
 
+# Install nodejs
+sudo apt install nodejs npm
+
+# Install python
+sudo apt install python3-venv python3-pip
+
