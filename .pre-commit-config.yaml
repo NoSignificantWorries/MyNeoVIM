@@ -1,9 +1,27 @@
 repos:
   - repo: local
     hooks:
-      - id: stylua-uv
-        name: stylua (via uv)
-        entry: uv tool run --from git+https://github.com/JohnnyMorganz/StyLua stylua
+      - id: stylua
+        name: StyLua (cargo)
+        description: An opinionated Lua code formatter
+        entry: stylua
+        language: rust
+        types:
+          - lua
+
+      - id: stylua-system
+        name: StyLua (system)
+        description: An opinionated Lua code formatter
+        entry: stylua
         language: system
-        types: [lua]
+        types:
+          - lua
+
+      - id: stylua-github
+        name: StyLua (Github)
+        description: An opinionated Lua code formatter. Downloads Github release
+        entry: stylua
+        language: python
+        types:
+          - lua
 
