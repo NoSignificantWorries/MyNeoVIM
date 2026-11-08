@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: stylua-uv
+        name: stylua (via uv)
+        entry: uv tool run --from git+https://github.com/JohnnyMorganz/StyLua stylua
+        language: system
+        types: [lua]
+

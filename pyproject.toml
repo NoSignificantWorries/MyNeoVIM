@@ -1,0 +1,23 @@
+[project]
+name = "nvim-config"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = [
+    { name = "NoSignificantWorries", email = "dmitry.karpachev@hotmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pre-commit>=4.7.0",
+]
+
+[project.scripts]
+nvim-config = "nvim_config:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = false
+
