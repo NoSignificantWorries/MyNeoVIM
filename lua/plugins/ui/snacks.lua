@@ -88,11 +88,11 @@ return {
 	},
 	config = function(_, opt)
 		require("snacks").setup(opt)
-		vim.api.nvim_set_hl(0, "SnacksDashboardKey", { fg = "#89dceb", bold = true })
-		vim.api.nvim_set_hl(0, "SnacksDashboardDesc", { fg = "#45475a", italic = true })
-		vim.api.nvim_set_hl(0, "SnacksDashboardIcon", { fg = "#6c7086" })
-		vim.api.nvim_set_hl(0, "SnacksDashboardSpecial", { fg = "#b4befe", bold = true })
-		vim.api.nvim_set_hl(0, "SnacksDashboardFooter", { fg = "#585b70", bold = false })
+		-- vim.api.nvim_set_hl(0, "SnacksDashboardKey", { fg = "#89dceb", bold = true })
+		-- vim.api.nvim_set_hl(0, "SnacksDashboardDesc", { fg = "#45475a", italic = true })
+		-- vim.api.nvim_set_hl(0, "SnacksDashboardIcon", { fg = "#6c7086" })
+		-- vim.api.nvim_set_hl(0, "SnacksDashboardSpecial", { fg = "#b4befe", bold = true })
+		-- vim.api.nvim_set_hl(0, "SnacksDashboardFooter", { fg = "#585b70", bold = false })
 	end,
 	keys = {
 		{
