@@ -7,12 +7,12 @@ else
 	vim.g.maplocalleader = "\\"
 
 	require("core.options")
-	-- require("config.keymaps")
+	require("core.keymaps")
 	require("core.lazy")
 	-- require("plugins.lang.lua")
-	-- require("config.style")
+	require("core.style")
 
-	-- require("config.autocmds")
+	require("core.autocmds")
 	-- require("lsp")
 
 	-- require("neovide").setup()

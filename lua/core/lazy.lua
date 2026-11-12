@@ -17,11 +17,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = {
 		{ import = "plugins.ui" },
+    { import = "plugins.mini" },
 		-- { import = "plugins.filesystem" },
-		-- { import = "plugins.text" },
+		{ import = "plugins.text" },
 		-- { import = "plugins.movement" },
 		-- { import = "plugins" },
-		{ import = "plugins.lsp" },
+		{ import = "plugins.mason" },
 		{ import = "plugins.code" },
 		{ import = "plugins.colorscheme" },
 	},

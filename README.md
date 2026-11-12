@@ -1,7 +1,5 @@
-# Test
+# My Neovim config
 
 
-List:
-- One
-- Two
+
 

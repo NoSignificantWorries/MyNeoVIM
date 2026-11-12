@@ -28,15 +28,10 @@ return {
         ---@type snacks.dashboard.Item[]
         keys = {
           { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-          -- { icon = "󰈭 ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
-          -- { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-          -- { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
           { icon = " ", key = "p", desc = "Open Project", action = ":NeovimProjectHistory" },
           { icon = " ", key = "d", desc = "Open Projects Discoverer", action = ":NeovimProjectDiscover" },
-          { icon = "󰖬 ", key = "w", desc = "Open Wiki main page", action = ":WikiIndex" },
-          -- { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+          -- { icon = "󰖬 ", key = "w", desc = "Open Wiki main page", action = ":WikiIndex" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
-          -- { icon = " ", key = "k", desc = "Keymaps", action = ":lua Snacks.picker.keymaps()" },
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
 
@@ -49,10 +44,8 @@ return {
 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
 			},
 			sections = {
-				-- { section = "header" },
 				{
 					section = "terminal",
-					-- cmd = "jp2a --colors --color-depth=24 --size=60x30 ~/.config/nvim/assets/vim-logo.png; sleep .1",
 					cmd = "~/.config/nvim/logo.sh; sleep .1",
 					height = 3,
 					padding = 2,
@@ -68,7 +61,7 @@ return {
 			enabled = false,
 		},
 		image = { enabled = true },
-		indent = { enabled = true },
+		indent = { enabled = false },
 		quickfile = { enabled = true },
 		input = { enabled = true },
 		notifier = { enabled = true },
@@ -80,11 +73,11 @@ return {
 			right = { "fold", "git" }, -- priority of signs on the right (high to low)
 			folds = {
 				open = false, -- show open fold icons
-				git_hl = false, -- use Git Signs hl for fold icons
+				git_hl = true, -- use Git Signs hl for fold icons
 			},
 		},
 		words = { enabled = true },
-		lazygit = { enabled = true },
+		lazygit = { enabled = false },
 	},
 	config = function(_, opt)
 		require("snacks").setup(opt)
@@ -118,13 +111,6 @@ return {
 				Snacks.picker.explorer()
 			end,
 			desc = "Toggle explorer",
-		},
-		{
-			"<leader>gl",
-			function()
-				Snacks.lazygit()
-			end,
-			desc = "Open lazygit",
 		},
 		-- Find
 		{
